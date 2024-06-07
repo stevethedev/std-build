@@ -6,6 +6,14 @@ import PackageDirectory from "./package-directory";
 import PackageJson from "./package-json";
 import FileSystem from "./file-system";
 
+export {
+  type BuildOptions,
+  PackageBuilder,
+  PackageDirectory,
+  PackageJson,
+  FileSystem,
+};
+
 export interface Config {
   packageDir: string;
   outputDir: string;
@@ -15,7 +23,7 @@ export interface Config {
   buildOptions?: BuildOptions;
 }
 
-export default async function build({
+export async function build({
   packageDir,
   outputDir,
   sourceDir,
