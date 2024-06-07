@@ -1,4 +1,4 @@
-import build from "../src/index";
+import { build } from "../src";
 
 build({
   packageDir: "./",
