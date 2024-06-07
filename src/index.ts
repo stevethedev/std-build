@@ -18,7 +18,6 @@ export interface Config {
   packageDir: string;
   outputDir: string;
   packageJson?: string | Record<string, unknown>;
-  sourceDir?: string;
   copyFiles?: string[];
   buildOptions?: BuildOptions;
 }
@@ -26,7 +25,6 @@ export interface Config {
 export async function build({
   packageDir,
   outputDir,
-  sourceDir,
   packageJson,
   copyFiles,
   buildOptions,
@@ -35,7 +33,6 @@ export async function build({
     packageDirectory: new PackageDirectory({
       packageDir,
       outputDir,
-      sourceDir,
     }),
     packageJson: getPackageJson(packageJson),
     fileSystem: new FileSystem(),
