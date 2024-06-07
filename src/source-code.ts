@@ -47,7 +47,9 @@ export default class SourceCode {
       // Local options
       ...overrides,
 
-      entryPoints: [this.#packageJson.entryPoint],
+      entryPoints: [
+        this.#packageDirectory.packageDir(this.#packageJson.entryPoint),
+      ],
       external: Array.from(
         new Set([
           ...(this.#buildOptions.external ?? []),
