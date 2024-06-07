@@ -1,6 +1,6 @@
 {
   "name": "std-build",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Steve the Dev's Build Primitives",
   "author": "Steven Jimenez",
   "main": "src/index.ts",
