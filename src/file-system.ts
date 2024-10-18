@@ -6,7 +6,7 @@ export default class FileSystem {
   async cleanFolder(fp: string): Promise<void> {
     try {
       await rm(fp, { recursive: true, force: true });
-    } catch (err) {
+    } catch {
       // Do nothing
     }
     await this.createFolder(fp);
@@ -15,7 +15,7 @@ export default class FileSystem {
   async createFolder(fp: string): Promise<void> {
     try {
       await mkdir(fp, { recursive: true });
-    } catch (err) {
+    } catch {
       // Do nothing
     }
   }
@@ -28,7 +28,7 @@ export default class FileSystem {
     try {
       await mkdir(dirname(destination), { recursive: true });
       await copyFile(source, destination);
-    } catch (err) {
+    } catch {
       return false;
     }
 
