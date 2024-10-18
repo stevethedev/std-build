@@ -8,3 +8,6 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    groups:
+      dev-dependencies:
+        dependency-type: "development"
